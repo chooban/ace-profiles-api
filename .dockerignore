@@ -1,0 +1,7 @@
+*
+!app/
+!bin/
+!nodemon.json
+!package.json
+!README.md
+!server.js
