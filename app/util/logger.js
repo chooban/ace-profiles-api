@@ -4,7 +4,6 @@ const winston = require('winston');
 
 winston.emitErrs = true;
 
-let configuredTransport = undefined;
 let logger = undefined;
 
 const logFileTransport = new winston.transports.File({
@@ -14,7 +13,6 @@ const logFileTransport = new winston.transports.File({
   maxsize: 5242880,
   maxFiles: 5,
   colorize: false,
-  handleExceptions: true,
   humanReadableUnhandledException: true,
   filename: 'previews-service.log',
 });

@@ -5,8 +5,8 @@ const routes = require('./app/routes');
 const jwt = require('express-jwt');
 
 const jwtCheck = jwt({
-  secret: '',
-  audience: ''
+  secret: process.env.SECRET,
+  audience: process.env.AUDIENCE
 });
 
 const app = express();

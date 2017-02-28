@@ -1,11 +1,11 @@
 const express = require('express');
 const router = express.Router();
 
-const getSearches = (req, res, next) => {
+const getSearches = (req, res) => {
   res.json('Hello, world!');
 };
 
-const updateSearches = (req, res, next) => {
+const updateSearches = (req, res) => {
   res.json('Hello, world!');
 };
 
