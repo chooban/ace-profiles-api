@@ -3,10 +3,11 @@ const logger = require('./app/util/logger');
 const bodyParser = require('body-parser');
 const routes = require('./app/routes');
 const jwt = require('express-jwt');
+const config = require('./app/util/config');
 
 const jwtCheck = jwt({
-  secret: process.env.SECRET,
-  audience: process.env.AUDIENCE
+  secret: config.secret,
+  audience: config.audience
 });
 
 const app = express();
