@@ -1,10 +1,8 @@
-'use strict';
-
 const winston = require('winston');
 
 winston.emitErrs = true;
 
-let logger = undefined;
+let logger;
 
 const logFileTransport = new winston.transports.File({
   level: process.env.LOG_LEVEL || 'info',
@@ -14,7 +12,7 @@ const logFileTransport = new winston.transports.File({
   maxFiles: 5,
   colorize: false,
   humanReadableUnhandledException: true,
-  filename: 'previews-service.log',
+  filename: 'previews-service.log'
 });
 
 const consoleTransport = new winston.transports.Console({
@@ -22,23 +20,23 @@ const consoleTransport = new winston.transports.Console({
   json: false,
   colorize: true,
   handleExceptions: true,
-  humanReadableUnhandledException: true,
+  humanReadableUnhandledException: true
 });
 
 if (process.env.NODE_ENV === 'production') {
   logger = new winston.Logger({
     transports: [logFileTransport],
-    exitOnError: false,
+    exitOnError: false
   });
 } else if (process.env.NODE_ENV === 'test') {
   logger = new winston.Logger({
     transports: [new winston.transports.Memory()],
-    exitOnError: false,
+    exitOnError: false
   });
 } else {
   logger = new winston.Logger({
     transports: [consoleTransport],
-    exitOnError: false,
+    exitOnError: false
   });
 }
 

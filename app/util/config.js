@@ -1,10 +1,10 @@
-'use strict';
-
 const fs = require('fs');
 
 const config = {
+  domain: 'acemyorder.eu.auth0.com',
   secret: '',
-  audience: ''
+  audience: '',
+  managementToken: ''
 };
 
 if (process.env.SECRET) {
