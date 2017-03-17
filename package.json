@@ -6,7 +6,7 @@
   "scripts": {
     "style": "eslint app/ bin/ server.js",
     "test": "mocha --recursive",
-    "start": "forever bin/www",
+    "start": "node ./bin/www",
     "devstart": "nodemon bin/www"
   },
   "author": "Ross Hendry (rhendry@googlemail.com)",
@@ -15,7 +15,6 @@
     "body-parser": "1.15.1",
     "express": "4.13.4",
     "express-jwt": "5.1.0",
-    "forever": "0.15.1",
     "morgan": "1.8.1",
     "request": "2.80.0",
     "request-promise": "4.1.1",
