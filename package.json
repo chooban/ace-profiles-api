@@ -5,9 +5,7 @@
   "main": "server.js",
   "scripts": {
     "style": "eslint app/ bin/ server.js",
-    "test": "mocha --recursive",
-    "start": "node ./bin/www",
-    "devstart": "nodemon bin/www"
+    "start": "node ./bin/www"
   },
   "author": "Ross Hendry (rhendry@googlemail.com)",
   "license": "ISC",
@@ -15,10 +13,8 @@
     "body-parser": "1.15.1",
     "express": "4.13.4",
     "express-jwt": "5.1.0",
-    "morgan": "1.8.1",
     "request": "2.80.0",
     "request-promise": "4.1.1",
-    "sprintf": "0.1.5",
     "winston": "2.2.0"
   },
   "devDependencies": {
@@ -27,7 +23,6 @@
     "eslint-plugin-import": "2.2.0",
     "eslint-plugin-jsx-a11y": "4.0.0",
     "eslint-plugin-react": "6.10.0",
-    "nodemon": "1.9.2",
     "winston-null": "1.0.2"
   }
 }
