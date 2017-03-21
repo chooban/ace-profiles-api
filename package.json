@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "style": "eslint app/ bin/ server.js",
-    "start": "forever ./bin/www"
+    "start": "node ./bin/www"
   },
   "author": "Ross Hendry (rhendry@googlemail.com)",
   "license": "ISC",
@@ -13,7 +13,6 @@
     "body-parser": "1.15.1",
     "express": "4.13.4",
     "express-jwt": "5.1.0",
-    "forever": "0.15.3",
     "request": "2.80.0",
     "request-promise": "4.1.1",
     "winston": "2.2.0"
